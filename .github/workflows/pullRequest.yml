@@ -10,7 +10,7 @@ jobs:
       - name: Checkout source code.
         uses: actions/checkout@v2
       - name: Install dependencies
-        run: npm insall
+        run: npm install
         working-directory: ./my-agora-states-client
       - name: Build
         run: npm run build
@@ -21,7 +21,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_EC2_METADATA_DISABLED: true
         run: |
-        
+
       - name: Sync Bucket
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
